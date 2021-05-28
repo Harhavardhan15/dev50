@@ -1,0 +1,6 @@
+{
+    "mongoURI":"mongodb://admin-harsha:F!ndityourself5@cluster0-shard-00-00.2j9i0.mongodb.net:27017,cluster0-shard-00-01.2j9i0.mongodb.net:27017,cluster0-shard-00-02.2j9i0.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "jwtSecret":"thisisasecret",
+    "githubClientId":"21653385fab37c2d78c2",
+    "githubSecret":"33fc4955c0b762748e06bb075e6c2cc5ca7013ad"
+}
