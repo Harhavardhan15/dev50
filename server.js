@@ -5,6 +5,7 @@ var cors = require('cors')
 
 //Connect Database
 connectDB();
+
 app.use(cors())
 // For parsing application/json 
 app.use(express.json()); 
