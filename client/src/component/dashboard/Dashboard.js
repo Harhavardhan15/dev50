@@ -22,7 +22,7 @@ const Dashboard = ({ getCurrentProfile,deleteAccount, auth:{user}, profile: { pr
       <Experience experience= {profile.experience} /> 
       <Education education= {profile.education} /> 
       <div className="my-2">
-          <button onClick={() => {deleteAccount()}} className="btn btn-danger"><i className="fa fa-user-minus"></i>Delete Account</button>
+          <button onClick={() => {deleteAccount()}} className="btn btn-delete"><i className="fa fa-user"></i> Delete Account</button>
       </div>
       </Fragment>:
       <Fragment>

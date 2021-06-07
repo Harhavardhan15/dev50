@@ -34,7 +34,7 @@ const CommentItem = ({
                 Posted on <Moment format="DD/MM/YYYY">{date}</Moment>
             </p>
             {!auth.loading && user===auth.user._id && (
-                <button onClick={(e => deleteComment(postId,_id))} type="button" className="btn btn-danger">Delete</button>
+                <button onClick={(e => deleteComment(postId,_id))} type="button" className="btn btn-delete"> <i className="fas fa-times"></i></button>
             )}
           </div>
         </div>

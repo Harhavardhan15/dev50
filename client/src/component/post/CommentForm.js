@@ -2,6 +2,7 @@ import React ,{useState} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux' 
 import {addComment} from '../../actions/post'
+import {setAlert} from '../../actions/alert'
 
 
 const CommentForm = ({postId,addComment}) => {
@@ -13,7 +14,10 @@ const CommentForm = ({postId,addComment}) => {
         </div>
         <form className="form my-1" onSubmit={e =>{
             e.preventDefault();
-            addComment(postId,{text});
+          
+              text.trim() !="" ? addComment(postId,{text}): setAlert('Please enter a string');
+            
+        
             setText('');
         }}>
           <textarea

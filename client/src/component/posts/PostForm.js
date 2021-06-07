@@ -2,17 +2,20 @@ import React,{useState} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {addPost} from '../../actions/post'
+import {setAlert} from '../../actions/alert'
 
-const PostForm = ({addPost}) => {
+const PostForm = ({addPost,setAlert}) => {
     const [text,setText] =useState(' ') ;
     return (
         <div className="post-form">
-        <div className="bg-primary p">
+        <div className="bg-dark p">
           <h3>Say Something...</h3>
         </div>
         <form className="form my-1" onSubmit={e =>{
             e.preventDefault();
-            addPost({text});
+           {
+             text.trim() !="" ? addPost({text}): setAlert('Please enter a string');
+           } 
             setText('');
         }}>
           <textarea
@@ -32,6 +35,7 @@ const PostForm = ({addPost}) => {
 
 PostForm.propTypes = {
 addPost:PropTypes.func.isRequired,
+setAlert: PropTypes.func.isRequired,
 }
 
-export default connect(null,{addPost})(PostForm) ;
+export default connect(null,{addPost,setAlert})(PostForm) ;

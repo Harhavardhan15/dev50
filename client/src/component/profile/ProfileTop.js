@@ -5,7 +5,7 @@ const ProfileTop = ({profile:{ status,designation,
 company,location,website,social,user:{name,avatar}}
 }) => {
     return (
-        <div className="profile-top bg-primary p-2">
+        <div className="profile-top bg-primary p-1">
         <img
           className="round-img my-1"
           src={avatar}

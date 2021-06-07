@@ -10,8 +10,8 @@ const ProfileItem = ({profile:{
     skills
 }}) => {
     return (
-        <div className="profile bg-light">
-      <img className="round.img" src={avatar} />
+        <div className="profile bg-card">
+      <img className="round-img" src={avatar} />
 
       <div>
           <h2>{name}</h2>
@@ -21,7 +21,7 @@ const ProfileItem = ({profile:{
       </div>
       <ul>
           {skills.slice(0,4).map((skill,index) => (
-              <li key={index} className="text-primary"><i className="fas fa-check"> </i> {skill}</li>
+              <li key={index} className="card-highlight"><i className="fas fa-check"> </i> {skill}</li>
           ))}
       </ul>
         </div>

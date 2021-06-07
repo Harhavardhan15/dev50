@@ -25,7 +25,7 @@ const Profile = ({getProfileById, profile:{profile,loading},auth, match}) => {
             <div className="profile-grid my-1">
                 <ProfileTop profile={profile} />
                 <ProfileAbout profile={profile} />                
-        <div className="profile-exp bg-white p-2">
+        <div className="profile-exp bg-white p-1">
         <h2 className="text-primary">Experience</h2>
         {profile.experience.length >0 ? <Fragment> 
             {   profile.experience.map(experience => (
@@ -34,7 +34,7 @@ const Profile = ({getProfileById, profile:{profile,loading},auth, match}) => {
         </Fragment> :(<h4>No Experience </h4>)}
 
         </div>
-        <div className="profile-edu bg-white p-2">
+        <div className="profile-edu bg-white p-1">
           <h2 className="text-primary">Education</h2> 
           {profile.education.length>0 ? <Fragment>
               {profile.education.map(education => (<ProfileEducation key={education._id} education={education} />))}
