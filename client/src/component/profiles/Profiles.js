@@ -30,7 +30,7 @@ const Profiles = ({getProfiles, profile:{profiles,loading}}) => {
                                         }
                                     )
 
-                                  ) : <h4>No profiles found <Spinner /> </h4>
+                                  ) : <Fragment> <Spinner /> </Fragment>
                               }
                           </div>
                        </Fragment>

@@ -13,7 +13,7 @@ const ProfileItem = ({profile:{
         <div className="profile bg-card">
       <img className="round-img" src={avatar} />
 
-      <div>
+      <div className="profile-card-sec">
           <h2>{name}</h2>
           <p>{status} {company && <span> at {company}</span>} </p>
           <p className="my-1">{ location && <span>{location}</span> }</p>

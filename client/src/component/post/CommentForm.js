@@ -9,8 +9,8 @@ const CommentForm = ({postId,addComment}) => {
     const [text,setText] = useState('');
     return (
         <div className="post-form">
-        <div className="bg-primary p">
-          <h3>Leave a comment</h3>
+        <div className=" ">
+          <h3 className="comment-text">Leave a reply</h3>
         </div>
         <form className="form my-1" onSubmit={e =>{
             e.preventDefault();

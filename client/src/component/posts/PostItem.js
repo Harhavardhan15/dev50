@@ -7,7 +7,7 @@ import {addLike,removeLike,deletePost} from '../../actions/post'
 
 const PostItem = ({auth,addLike,removeLike,deletePost,post:{_id,text,name,avatar,user,likes,comments,date},showActions}) => {
     return (
-        <div className="post bg-white p-1 my-1">
+        <div className="post bg-card p-1 my-1">
         <div>
           <Link to={`/profile/${user}`}>
             <img
@@ -26,17 +26,17 @@ const PostItem = ({auth,addLike,removeLike,deletePost,post:{_id,text,name,avatar
               Posted on<Moment format="DD/MM/YYYY">{date}</Moment> 
           </p>
           {showActions && <Fragment>
-            <button type="button" className="btn btn-dark" onClick={(e) => addLike(_id) }>
+            <button type="button" className="btn btn-like" onClick={(e) => addLike(_id) }>
             <i className="fas fa-thumbs-up"></i> {' '}
             {likes.length >0 && (
  <span>{likes.length}</span>
             )}
            
           </button>
-          <button  onClick={(e) => removeLike(_id) } type="button" className="btn btn-dark">
+          <button  onClick={(e) => removeLike(_id) } type="button" className="btn btn-like">
             <i className="fas fa-thumbs-down"></i>
           </button>
-          <Link to={`/post/${_id}`}  className="btn btn-dark">
+          <Link to={`/post/${_id}`}  className="btn btn-like">
           <i className="fas fa-comments"></i> {' '} {comments.length > 0  && (
                 <span className=''>{comments.length}</span>
             )} 

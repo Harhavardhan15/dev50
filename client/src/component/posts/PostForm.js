@@ -8,7 +8,7 @@ const PostForm = ({addPost,setAlert}) => {
     const [text,setText] =useState(' ') ;
     return (
         <div className="post-form">
-        <div className="bg-dark p">
+        <div className="bg-dark p border-rad">
           <h3>Say Something...</h3>
         </div>
         <form className="form my-1" onSubmit={e =>{

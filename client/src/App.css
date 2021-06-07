@@ -180,7 +180,8 @@ img {
 
 .bg-card{
   background: var(--card-color);
-  color:var(--card-text-color)
+  color:var(--card-text-color);
+  border-radius:20px;
 }
 .card-highlight{
   color: var(--card-text-highlight);
@@ -192,7 +193,13 @@ img {
   background: var(--dark-color);
   color: #fff;
 }
-
+ .border-rad{
+  border-radius:20px;
+}
+.btn-like{
+  background: #fbdc6b;
+  color:white;
+}
 .btn-danger,
 .bg-danger,
 .badge-danger,
@@ -232,6 +239,16 @@ img {
 .badge-light {
   border: #ccc solid 1px;
   border-radius:20px;
+}
+.bg-comment{
+  background:#fbdc6b;
+  border-radius:20px;
+}
+.comment-text{
+  box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2);  
+  border-radius:20px;
+  padding:10px;
+  background:#ffc93c;
 }
 
 .round-img {
@@ -312,11 +329,11 @@ button {
 .table td {
   padding: 1rem;
   text-align: left;
-  background:var(--card-color);
+  background:var(--light-color);
 }
 
 .table th {
-  background: var(--light-color);
+  background: var(--card-color);
 }
 
 /* Navbar */
@@ -379,7 +396,7 @@ button {
 .profile {
   display: grid;
   grid-template-columns: 3fr 6fr 5fr;
-  align-items: center;
+  align-items: flex-start;
   grid-gap: 1rem;
   padding: 0.5rem;
   overflow: hidden;
@@ -412,7 +429,28 @@ button {
   text-transform: capitalize;
 }
 
-
+.profile ul{
+  background: #fbdc6b;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  display: grid;
+  box-shadow: 0px 0px 2px 2px rgb(134 117 0 / 11%);
+}
+.profile ul li{
+  height: 26px;
+    overflow: hidden;
+    text-align:left;
+}
+.profile-card-sec{
+  height: 100%;
+  background: #fbdc6b;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px 2px rgb(134 117 0 / 11%);
+  padding: 10px;
+  text-align: left;
+  color: #31326f;
+}
 .profile-top img {
   width: 100px;
   border-radius: 50%;
@@ -500,9 +538,10 @@ button {
 
 .post {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap:1rem;
-  align-items: start;
+    grid-template-columns: 1fr 8fr;
+    grid-gap: 1rem;
+    align-items: start;
+    box-shadow: 0px 0px 2px 2px rgb(134 117 0 / 11%);
 }
 
 .post > div:first-child {
@@ -510,14 +549,17 @@ button {
 }
 
 .post img {
-  width: 100px;
+  width: 50px;
 }
 .post-heading{
   font-size: 20px;
+  padding: 10px;
+  background: #fbdc6b;
+  border-radius: 20px;
   font-weight: bold;
   color: var(--primary-color);
   text-transform: capitalize;
-
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 13%);
 }
 .post .comment-count {
   background: var(--light-color);
@@ -576,6 +618,9 @@ button {
   }
 
   /* Profiles Page */
+  .profiles{
+    grid-template-columns: 1fr;
+  }
   .profile {
     grid-template-columns: 1fr;
     text-align: center;
@@ -618,7 +663,8 @@ button {
   }
 
   .post {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-gap:5px;
   }
   .post a,
   .post button {

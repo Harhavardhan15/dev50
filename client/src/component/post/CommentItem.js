@@ -15,7 +15,7 @@ const CommentItem = ({
 }) => {
  
     return (
-        <div className="post bg-white p-1 my-1">
+        <div className="post bg-comment p-1 my-1">
           <div>
             <Link to={`/profile/${user}`} >
               <img
@@ -27,7 +27,7 @@ const CommentItem = ({
             </Link>
           </div>
           <div>
-            <p className="my-1">
+            <p className="my-1 comment-text">
             {text}
             </p>
              <p className="post-date">
