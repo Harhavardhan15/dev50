@@ -18,7 +18,7 @@ router.post('/', [auth, [
     }
 
     try {
-        const user = await (await User.findById(req.user.id)).select('-password');
+        const user = await ( User.findById(req.user.id)).select('-password'); 
 
         const newPost = new Post({
             text: req.body.text,
@@ -27,7 +27,7 @@ router.post('/', [auth, [
             user: req.user.id
         })
         const post = await newPost.save();
-        res.json(post);
+        res.json(post); 
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error')
@@ -40,13 +40,13 @@ router.post('/', [auth, [
 //access private
 router.get('/',auth,async(req,res)=>{
     try {
-        const posts = await Post.find().sort({date:-1}); 
+        const posts = await Post.find().sort({_id:-1}); 
         res.json(posts);        
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Server Error");
     }
-})
+}) 
 
 
 //route GET api/post/:id
@@ -73,6 +73,7 @@ router.get('/:id', auth, async(req,res)=>{
 //desc delete  post by id
 //access private
 router.delete('/:id', auth, async(req,res)=>{
+    
     try {
         const post = await Post.findById(req.params.id);
         if(!post){
@@ -99,11 +100,16 @@ router.delete('/:id', auth, async(req,res)=>{
 //access private
 router.put('/like/:id',auth , async(req,res) =>{
     try {
+        
        const post = await Post.findById(req.params.id);
        //check if user has alredy liked the post
        if(post.likes.filter(like =>like.user.toString()===req.user.id).length>0){
+           
 return res.status(400).json({msg:'Post already liked'})
+
+        
        }
+
        post.likes.unshift({user:req.user.id});
        await post.save();
        res.json(post.likes);

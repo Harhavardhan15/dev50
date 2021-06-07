@@ -325,11 +325,11 @@ try{
           }
           if(response.statusCode!==200){
            return res.status(404).json({msg:'No Github profile found'})
-          }
+          } 
           res.json(JSON.parse(body));
   })
 }catch(err){
-  console.error(err.message);
+  console.error(err.message); 
   res.status(500).send('Server Error');
 }
 })

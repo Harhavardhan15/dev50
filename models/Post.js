@@ -50,7 +50,9 @@ const PostSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now()
-    }
-})
+    },
+  
+  
+},  {timeStamps:true});
 
 module.exports = Post = mongoose.model('post', PostSchema);
