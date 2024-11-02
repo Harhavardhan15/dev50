@@ -1,7 +1,7 @@
-{/*
-    "mongoURI":"",
-    "jwtSecret":"",
+{
+    "mongoURI":"mongodb+srv://admin-harsha:F!ndityourself5@cluster0.2j9i0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "jwtSecret":"jwtsecret",
     "githubClientId":"",
     "githubSecret":""
-    */
+    
 }

@@ -218,6 +218,7 @@ res.status(500).send('Server Error');
 //access Private
 router.delete('/experience/:exp_id', auth, async(req,res) =>{
 try{
+  
   const profile = await Profile.findOne({user:req.user.id});
 
   //get remove index
